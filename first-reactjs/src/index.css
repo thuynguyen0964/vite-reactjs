@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 62.5%;
+}
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+input,
+select,
+textarea {
+  background-color: transparent;
+  outline: none;
+}
+button {
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: 0;
+}
+body {
+  min-height: 100vh;
+  font-size: 1.6rem;
+  padding: 20px 0;
+}
+.App {
+  max-width: calc(100% - 48px);
+  width: 1280px;
+  margin: 0 auto;
+}
+
+/* map render in Reactjs */
+.you-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.images {
+  margin-bottom: 10px;
+}
+
+.you-item .images img {
+  width: 320px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.you-content {
+  display: flex;
+  gap: 20px;
+}
+.you-avatar {
+  flex-shrink: 0;
+}
+.you-avatar img {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.you-title {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.you-name {
+  font-size: 1.4rem;
+  color: #ccc;
+}
+
+.contrast {
+  filter: brightness(40%);
+}
+
+.wrap {
+  margin-top: 20px;
+}
+
+/* useState in Reactjs */
+
+.toggle {
+  width: 110px;
+  height: 50px;
+  border-radius: 999px;
+  background-color: #ccc;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.toggle,
+.spinner {
+  transition: all 0.25s ease-in-out;
+}
+
+.toggle.active {
+  background-color: #1366e3;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.toggle.active .spinner {
+  transform: translate(60px);
+}
+
+/* Game Caro in Reactjs */
+.game {
+  margin: 20px 0;
+}
+.board-row {
+  width: 300px;
+  height: 300px;
+  gap: 25px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.game-cell {
+  cursor: pointer;
+  font-weight: 600;
+  display: grid;
+  place-items: center;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  font-size: 4rem;
+}
+.game-reset {
+  margin-top: 20px;
+  background-color: #f62682;
+  border-radius: 5px;
+  padding: 12px 24px;
+  color: #fff;
+}
+.blue {
+  color: #0f99c6;
+}
+.red {
+  color: #c9b77f;
+}
+.game-winner {
+  font-size: 2rem;
+  padding: 25px 0;
+  color: #f62682;
+}
